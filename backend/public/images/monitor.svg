@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Monitor</title>
+  <desc id="desc">Ilustração de um monitor widescreen.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="55%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="48" fill="url(#bg)"/>
+  <circle cx="250" cy="140" r="130" fill="#ffffff" opacity="0.08"/>
+  <circle cx="960" cy="650" r="190" fill="#ffffff" opacity="0.06"/>
+  <rect x="190" y="130" width="820" height="500" rx="30" fill="#0f172a" opacity="0.34"/>
+  <rect x="210" y="150" width="780" height="420" rx="24" fill="url(#screen)" stroke="#cbd5e1" stroke-width="10"/>
+  <rect x="260" y="195" width="680" height="330" rx="18" fill="#0b1220"/>
+  <rect x="300" y="235" width="600" height="36" rx="18" fill="url(#glow)" opacity="0.95"/>
+  <rect x="300" y="295" width="430" height="24" rx="12" fill="#60a5fa" opacity="0.75"/>
+  <rect x="300" y="340" width="520" height="24" rx="12" fill="#a78bfa" opacity="0.7"/>
+  <rect x="300" y="385" width="360" height="24" rx="12" fill="#34d399" opacity="0.75"/>
+  <rect x="540" y="560" width="120" height="34" rx="17" fill="#94a3b8"/>
+  <rect x="490" y="590" width="220" height="54" rx="20" fill="#e2e8f0"/>
+  <rect x="390" y="640" width="420" height="28" rx="14" fill="#cbd5e1"/>
+  <circle cx="600" cy="404" r="82" fill="#ffffff" opacity="0.08"/>
+</svg>
