@@ -150,49 +150,53 @@ export function HomePage() {
           </div>
 
           <div
-            id="cart-panel-body"
-            className={`cart-panel-body ${isCartOpen ? "" : "cart-panel-body--hidden"}`}
+            className={`cart-panel-scroll ${isCartOpen ? "" : "cart-panel-scroll--hidden"}`}
           >
-            <CartSidebar
-              cart={cartQuery.data}
-              quantities={quantities}
-              onQuantityChange={(productId, value) =>
-                setQuantities((prev) => ({
-                  ...prev,
-                  [productId]: value,
-                }))
-              }
-              onUpdate={(productId, quantity) =>
-                cartActions.updateCart({ productId, quantity })
-              }
-              onRemove={(productId) =>
-                cartActions.updateCart({ productId, quantity: 0 })
-              }
-              errorMessage={
-                cartQuery.isError
-                  ? (cartQuery.error as Error).message
-                  : undefined
-              }
-            />
-          </div>
+            <div
+              id="cart-panel-body"
+              className={`cart-panel-body ${isCartOpen ? "" : "cart-panel-body--hidden"}`}
+            >
+              <CartSidebar
+                cart={cartQuery.data}
+                quantities={quantities}
+                onQuantityChange={(productId, value) =>
+                  setQuantities((prev) => ({
+                    ...prev,
+                    [productId]: value,
+                  }))
+                }
+                onUpdate={(productId, quantity) =>
+                  cartActions.updateCart({ productId, quantity })
+                }
+                onRemove={(productId) =>
+                  cartActions.updateCart({ productId, quantity: 0 })
+                }
+                errorMessage={
+                  cartQuery.isError
+                    ? (cartQuery.error as Error).message
+                    : undefined
+                }
+              />
+            </div>
 
-          <div
-            className={`checkout-panel ${isCartOpen ? "" : "checkout-panel--compact"}`}
-          >
-            <CheckoutForm
-              onSubmit={handleCheckout}
-              isSubmitting={checkoutMutation.isPending}
-              errorMessage={
-                checkoutMutation.isError
-                  ? (checkoutMutation.error as Error).message
-                  : undefined
-              }
-              successMessage={
-                checkoutMutation.data
-                  ? `Pedido #${checkoutMutation.data.saleId} confirmado. Total: ${checkoutMutation.data.total.toFixed(2)}`
-                  : undefined
-              }
-            />
+            <div
+              className={`checkout-panel ${isCartOpen ? "" : "checkout-panel--compact"}`}
+            >
+              <CheckoutForm
+                onSubmit={handleCheckout}
+                isSubmitting={checkoutMutation.isPending}
+                errorMessage={
+                  checkoutMutation.isError
+                    ? (checkoutMutation.error as Error).message
+                    : undefined
+                }
+                successMessage={
+                  checkoutMutation.data
+                    ? `Pedido #${checkoutMutation.data.saleId} confirmado. Total: ${checkoutMutation.data.total.toFixed(2)}`
+                    : undefined
+                }
+              />
+            </div>
           </div>
         </section>
       </main>

@@ -4,12 +4,26 @@
   font-family: "Space Grotesk", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #1e2b44;
-  background: linear-gradient(180deg, #eef4fb 0%, #f6f8fb 45%, #edf2f7 100%);
+  color: #162033;
+  background: #f3f5f8;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --page-bg: #f3f5f8;
+  --surface: #ffffff;
+  --surface-soft: #f8fafc;
+  --surface-muted: #eef2f6;
+  --border: #d8e0e8;
+  --border-strong: #c7d1dd;
+  --text: #162033;
+  --text-muted: #5c697d;
+  --accent: #1f4b99;
+  --accent-strong: #123a7a;
+  --accent-soft: #e8eef9;
+  --success: #166534;
+  --danger: #9f2a3d;
 }
 
 * {
@@ -19,13 +33,8 @@
 body {
   margin: 0;
   min-width: 320px;
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(255, 255, 255, 0.72),
-      transparent 28%
-    ),
-    linear-gradient(180deg, #eef4fb 0%, #f6f8fb 45%, #edf2f7 100%);
+  color: var(--text);
+  background: var(--page-bg);
 }
 
 a {
