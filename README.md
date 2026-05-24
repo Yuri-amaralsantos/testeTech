@@ -1,4 +1,4 @@
-# Desafio Carrinho de Compras (Vite + Node.js)
+# Desafio E-Commerce (Vite + Node.js)
 
 Projeto full stack com:
 
@@ -15,7 +15,7 @@ Projeto full stack com:
 
 ### Front-end
 
-- Lista de produtos com nome, descricao e imagem ilustrativa
+- Lista de produtos com nome, descrição e imagem ilustrativa
 - Adicionar produto ao carrinho
 - Visualizar carrinho com:
   - nome
@@ -32,7 +32,7 @@ Projeto full stack com:
 - `GET /carrinho` -> retorna estado atual do carrinho
 - `POST /carrinho` -> adiciona produto no carrinho
 - `PUT /carrinho` -> atualiza quantidade ou remove item (quantidade 0)
-- `POST /finalizar-compra` -> registra venda no banco relacional e gera e-mail de confirmacao
+- `POST /finalizar-compra` -> registra venda no banco relacional e gera e-mail de confirmação
 
 ## Requisitos
 
@@ -51,11 +51,11 @@ npm run dev
 
 API disponivel em `http://localhost:3001`.
 
-Observacoes:
+Observações:
 
 - Banco relacional SQLite em `backend/database.sqlite`
-- Produtos sao semeados automaticamente no primeiro start
-- E-mail de confirmacao e gerado com `jsonTransport` do Nodemailer e exibido no log do backend
+- Produtos são semeados automaticamente no primeiro start
+- E-mail de confirmação é gerado com `jsonTransport` do Nodemailer e exibido no log do backend
 
 ### 2) Subir frontend
 
@@ -71,7 +71,7 @@ App disponivel em `http://localhost:5173`.
 
 ## Variaveis de ambiente (frontend)
 
-Opcionalmente, voce pode criar `frontend/.env` para trocar a URL da API:
+Opcionalmente, você pode criar `frontend/.env` para trocar a URL da API:
 
 ```env
 VITE_API_URL=http://localhost:3001
@@ -79,10 +79,10 @@ VITE_API_URL=http://localhost:3001
 
 ## Seguranca aplicada no backend
 
-- `helmet` para headers de seguranca
+- `helmet` para headers de segurança
 - `cors` restrito ao frontend local
 - `express-rate-limit` para limitar abuso
-- Validacao de payload com `zod`
+- Validação de payload com `zod`
 - JSON body limitado em tamanho
 
 ## Build de producao
