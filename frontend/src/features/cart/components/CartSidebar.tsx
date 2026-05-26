@@ -1,3 +1,5 @@
+"use client";
+
 import type { CartResponse } from "../../../shared/types/domain";
 import { formatMoney } from "../../../shared/utils/money";
 import { CartItem } from "./CartItem";

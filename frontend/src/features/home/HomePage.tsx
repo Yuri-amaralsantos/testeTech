@@ -1,16 +1,18 @@
+"use client";
+
 import { useEffect, useMemo, useState } from "react";
 import { HeroBanner } from "../../shared/components/layout/HeroBanner";
 import { CategoryStrip } from "../../shared/components/layout/CategoryStrip";
 import { PageContainer } from "../../shared/components/layout/PageContainer";
 import { Topbar } from "../../shared/components/layout/Topbar";
-import { ProductGrid } from "../../features/products/components/ProductGrid";
-import { useProducts } from "../../features/products/hooks/useProducts";
-import { useCart } from "../../features/cart/hooks/useCart";
-import { useCartActions } from "../../features/cart/hooks/useCartActions";
-import { CartSidebar } from "../../features/cart/components/CartSidebar";
-import { CheckoutForm } from "../../features/checkout/components/CheckoutForm";
-import { useCheckout } from "../../features/checkout/hooks/useCheckout";
-import type { CheckoutFormValues } from "../../features/checkout/schemas/checkoutSchema";
+import { ProductGrid } from "../products/components/ProductGrid";
+import { useProducts } from "../products/hooks/useProducts";
+import { useCart } from "../cart/hooks/useCart";
+import { useCartActions } from "../cart/hooks/useCartActions";
+import { CartSidebar } from "../cart/components/CartSidebar";
+import { CheckoutForm } from "../checkout/components/CheckoutForm";
+import { useCheckout } from "../checkout/hooks/useCheckout";
+import type { CheckoutFormValues } from "../checkout/schemas/checkoutSchema";
 import {
   productCategoryLabels,
   type ProductCategory,

@@ -437,9 +437,14 @@
   letter-spacing: 0.04em;
 }
 
-.product-card img {
+.product-image-wrap {
+  position: relative;
   width: 100%;
   height: 168px;
+  overflow: hidden;
+}
+
+.product-image {
   object-fit: cover;
 }
 

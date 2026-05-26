@@ -1,22 +1,26 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "dist/server.js",
+  "main": "dist/main.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
+    "dev": "nest start --watch",
     "build": "tsc -p tsconfig.json",
-    "start": "node dist/server.js"
+    "start": "node dist/main.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@nestjs/common": "^11.1.7",
+    "@nestjs/core": "^11.1.7",
+    "@nestjs/platform-express": "^11.1.7",
     "better-sqlite3": "^12.10.0",
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "express-rate-limit": "^8.5.2",
     "helmet": "^8.1.0",
+    "rxjs": "^7.8.2",
     "nodemailer": "^8.0.7",
     "reflect-metadata": "^0.2.2",
     "sqlite3": "^6.0.1",
@@ -24,11 +28,11 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@nestjs/cli": "^11.0.10",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/node": "^25.9.1",
     "@types/nodemailer": "^8.0.0",
-    "tsx": "^4.22.3",
     "typescript": "^6.0.3"
   }
 }

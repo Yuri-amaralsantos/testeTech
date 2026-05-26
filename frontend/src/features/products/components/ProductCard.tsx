@@ -1,3 +1,6 @@
+"use client";
+
+import Image from "next/image";
 import type { Product } from "../../../shared/types/domain";
 import { formatMoney } from "../../../shared/utils/money";
 
@@ -10,7 +13,15 @@ export function ProductCard({ product, onAdd }: Props) {
   return (
     <article className="product-card">
       <span className="deal-chip">Oferta</span>
-      <img src={product.imageUrl} alt={product.name} />
+      <div className="product-image-wrap">
+        <Image
+          src={product.imageUrl}
+          alt={product.name}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          className="product-image"
+        />
+      </div>
 
       <div className="product-content">
         <h3>{product.name}</h3>

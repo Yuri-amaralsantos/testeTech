@@ -1,15 +1,15 @@
-# Desafio E-Commerce (Vite + Node.js)
+# Desafio E-Commerce (Next.js + NestJS)
 
 Projeto full stack com:
 
-- Front-end: React + Vite + TypeScript
-- Back-end: Node.js + Express + TypeORM + SQLite (relacional)
+- Front-end: Next.js + React + TypeScript
+- Back-end: NestJS + TypeORM + SQLite (relacional)
 - Extras aplicados: React Hook Form, TanStack Query, Zod
 
 ## Estrutura
 
-- `frontend/` -> interface da loja e carrinho
-- `backend/` -> API RESTful do carrinho e checkout
+- `frontend/` -> interface da loja e carrinho em Next.js
+- `backend/` -> API RESTful do carrinho e checkout em NestJS
 
 ## Funcionalidades implementadas
 
@@ -67,14 +67,14 @@ npm install
 npm run dev
 ```
 
-App disponivel em `http://localhost:5173`.
+App disponivel em `http://localhost:3000`.
 
 ## Variaveis de ambiente (frontend)
 
-Opcionalmente, você pode criar `frontend/.env` para trocar a URL da API:
+Opcionalmente, você pode criar `frontend/.env.local` para trocar a URL da API:
 
 ```env
-VITE_API_URL=http://localhost:3001
+NEXT_PUBLIC_API_URL=http://localhost:3001
 ```
 
 ## Seguranca aplicada no backend
@@ -92,6 +92,7 @@ VITE_API_URL=http://localhost:3001
 ```bash
 cd frontend
 npm run build
+npm run start
 ```
 
 ### Backend
